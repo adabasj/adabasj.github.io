@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-#######<head>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<head>
+  
   <base href="/">
 
   <meta charset="UTF-8">
@@ -12,7 +12,16 @@
   Our innovative online platform offers flexibility and convenience, allowing you to learn at your own pace, anytime, anywhere. Engage with interactive lectures, collaborate with peers through group projects, and receive personalized feedback from instructors who are committed to your success.
   
   ">
-
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    window.addEventListener("flutter-first-frame", function () {
+        var loadingIndicator = document.getElementById("loading_indicator");
+        if (loadingIndicator) {
+        loadingIndicator.remove();
+        window.Telegram.WebApp.ready();
+        }
+    });
+ </script>
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -74,13 +83,10 @@
     window.flutterWebRenderer = "html";
   </script>
   <script>
-<<<<<<< HEAD
-    const serviceWorkerVersion = "2712619237";
-=======
-    const serviceWorkerVersion = "915089560";
->>>>>>> c19cc7a61fa942461ddbb69982692474320d63e8
+    const serviceWorkerVersion = "1468213916";
   </script>
   <script src="flutter.js" defer></script>
+ 
 </head>
 
 <body>
